@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --dourado: #C5A253;
+    --laranja: #E27C3E;
+    --vermelho: #C0392B;
+    --creme: #EEDDC6;
+    --marrom: c;
+    --laranja-suave: #F7C59F;
+    --playfair: "Playfair Display", serif;
+    --lato: "Lato", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--lato);
+    background: var(--creme);
+    color: #791F16;
+    line-height: 1.6;
+  }
+
+  header {
+    background-image: url(../imagens/header.png);
+  }
+  
+  /* Header */
+  .header {
+    background-color: var(--creme);
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+    font-family: var(--playfair);
+    margin-bottom: 1rem;
+    color: #791F16;
+  }
+  
+  .cta-button {
+    background: #CA3922;
+    color: #F4FCFD;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-family: var(--lato);
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.2s;
+  }
+  
+  .cta-button:hover {
+    background: #791F16;
+  }
+  
+  /* Cestas */
+  .cestas-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--creme);
+  }
+
+  .cestas-section h2 {
+    font-family: var(--playfair);
+    font-weight: bold;
+    font-size: 2em;
+    color: #791F16;
+  }
+
+  p#subtitulo {
+    font-family: var(--playfair);
+  }
+  
+  .cestas-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    color: var(--marrom);
+    padding: 1rem;
+    user-select: none;
+  }
+  
+  .cestas-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .cesta-card {
+    min-width: 250px;
+    margin: 1rem;
+    background: #fff;
+    padding: .5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    flex: 0 0 auto;
+  }
+  
+  .cesta-card img {
+    width: 40vw;
+    height: 40vh;
+    border-radius: 10px;
+  }
+  
+  /* FAQ */
+  .faq-section {
+    padding: 4rem 2rem;
+  }
+  
+  .faq-item {
+    margin-bottom: 2rem;
+  }
+  
+  .faq-item h3 {
+    color: var(--vermelho);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--marrom);
+    color: #fff;
+  }
+  
