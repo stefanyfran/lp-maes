@@ -7,7 +7,7 @@
     --laranja: #E27C3E;
     --vermelho: #C0392B;
     --creme: #EEDDC6;
-    --marrom: c;
+    --marrom: #791F16;
     --laranja-suave: #F7C59F;
     --playfair: "Playfair Display", serif;
     --lato: "Lato", sans-serif;
@@ -46,7 +46,7 @@
     color: #791F16;
   }
   
-  .cta-button {
+  .header-button {
     background: #CA3922;
     color: #F4FCFD;
     padding: 0.8rem 1.5rem;
@@ -57,7 +57,7 @@
     transition: 0.2s;
   }
   
-  .cta-button:hover {
+  .header-button:hover {
     background: #791F16;
   }
   
@@ -83,36 +83,57 @@
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    justify-content: center;
   }
   
   .arrow {
     font-size: 2rem;
     color: var(--marrom);
-    padding: 1rem;
-    user-select: none;
+    cursor: pointer;
   }
   
   .cestas-container {
     display: flex;
-    overflow-x: auto;
     scroll-behavior: smooth;
+    overflow: hidden;
   }
   
   .cesta-card {
-    min-width: 250px;
+    width: 60vw;
+    height: 60vh;
     margin: 1rem;
     background: #fff;
     padding: .5rem;
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    flex: 0 0 auto;
+    flex-shrink: 0;
   }
   
   .cesta-card img {
-    width: 40vw;
-    height: 40vh;
-    border-radius: 10px;
+    width: 55vw;
+    padding: .5rem;
+    border-radius: 1rem;
+  }
+
+  .cesta-card > h3 {
+    font-family: var(--playfair);
+  }
+
+  .cta-button {
+    display: block;
+    background: #CA3922;
+    color: #F4FCFD;
+    margin: 1rem;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-family: var(--lato);
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.2s;
+  }
+  
+  .cta-button:hover {
+    background: #791F16;
   }
   
   /* FAQ */

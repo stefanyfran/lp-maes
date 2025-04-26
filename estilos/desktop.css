@@ -1,0 +1,45 @@
+.cestas-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--creme);
+  }
+  
+  .cestas-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    color: var(--marrom);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  
+  .cestas-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+  }
+  
+  .cesta-card {
+    min-width: 280px;
+    margin: 1rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  
+  .cesta-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

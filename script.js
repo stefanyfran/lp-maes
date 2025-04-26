@@ -1,49 +1,48 @@
-// Faz a rolagem horizontal das cestas deslizar com o dedo
-const container = document.querySelector('.cestas-container');
+const container = document.getElementById('cestas');
 
-let isDown = false;
-let startX;
-let scrollLeft;
+// Função para scroll manual via setas
+function scrollCestas(direction) {
+  const scrollAmount = 300;
 
-container.addEventListener('mousedown', (e) => {
-  isDown = true;
-  container.classList.add('active');
-  startX = e.pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-});
+  if (direction === 'left') {
+    container.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    });
+  } else {
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+}
 
-container.addEventListener('mouseleave', () => {
-  isDown = false;
-  container.classList.remove('active');
-});
+// Função para detectar se é touch (mobile)
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
 
-container.addEventListener('mouseup', () => {
-  isDown = false;
-  container.classList.remove('active');
-});
+// Se for touch, adiciona drag manual
+if (isTouchDevice()) {
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
 
-container.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - container.offsetLeft;
-  const walk = (x - startX) * 2;
-  container.scrollLeft = scrollLeft - walk;
-});
+  container.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  });
 
-// Para touch em celular
-container.addEventListener('touchstart', (e) => {
-  isDown = true;
-  startX = e.touches[0].pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-});
+  container.addEventListener('touchend', () => {
+    isDragging = false;
+  });
 
-container.addEventListener('touchend', () => {
-  isDown = false;
-});
-
-container.addEventListener('touchmove', (e) => {
-  if (!isDown) return;
-  const x = e.touches[0].pageX - container.offsetLeft;
-  const walk = (x - startX) * 2;
-  container.scrollLeft = scrollLeft - walk;
-});
+  container.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - container.offsetLeft;
+    const walk = (x - startX) * 2; // velocidade do arraste
+    container.scrollLeft = scrollLeft - walk;
+  });
+}
