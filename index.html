@@ -1,76 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cestas Dia das Mães</title>
+  <title>Cesta de chocolates Dia das Mães</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
   <link rel="stylesheet" href="estilos/style.css">
-  
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="header-content">
-      <h1>O amor de mãe merece um presente único.</h1>
-      <a href="https://wa.me/seu_numero" target="_blank" class="header-button">Pedir agora no WhatsApp</a>
+  <header>
+    <div class="titulo-header">
+      <h1>O amor de mãe merece um presente único!</h1>
+      <a href="#">Pedir agora no WhatsApp</a>
     </div>
   </header>
+  <main>
+    <section class="cestas">
+      <img src="imagens/linha.png" alt="Linha Decorativa" class="linha">
+      <h2 class="titulo-cestas">Nossas Cestas Especiais</h2>
+      <p class="subtitulo-cestas">Escolha o presente perfeito para emocionar sua mãe!</p>
 
-  <!-- Seção Cestas -->
-  <section class="cestas-section">
-    <h2>Nossas Cestas Especiais</h2>
-    <p id="subtitulo">Escolha o presente perfeito para emocionar sua mãe!</p>
-    <div class="cestas-carousel">
-      <div class="arrow left">&#8592;</div>
-      <div class="cestas-container">
-        <div class="cesta-card">
-          <img src="imagens/cesta.png" alt="Cesta Pequena">
-          <h3>Cesta Pequena</h3>
-          <p>Chocolates selecionados, porta-joias e colar de prata personalizado.</p>
-          <a href="https://wa.me/seu_numero" target="_blank" class="cta-button">Pedir Agora</a>
-        </div>
-
-        <div class="cesta-card">
-          <img src="imagens/cesta.png" alt="Cesta Média">
-          <h3>Cesta Média</h3>
-          <p>Mais chocolates, um porta-joias especial e colar personalizado de luxo.</p>
-          <a href="https://wa.me/seu_numero" target="_blank" class="cta-button">Pedir Agora</a>
-        </div>
-
-        <div class="cesta-card">
-          <img src="imagens/cesta.png" alt="Cesta Grande">
-          <h3>Cesta Grande</h3>
-          <p>Uma seleção completa de chocolates premium, joias e carinho.</p>
-          <a href="https://wa.me/seu_numero" target="_blank" class="cta-button">Pedir Agora</a>
-        </div>
+      <div class="card">
+        <img src="imagens/cesta.png" alt="Cesta Pequena">
+        <h3>Opção 1</h3>
+        <p class="descricao">5 itens: 3 trufas, 1 barra de 100g, 1 caixa de bomboms</p>
+        <p class="valor">R$ 150,00</p>
+        <a href="#" class="botao">Quero essa!</a>
       </div>
-      <div class="arrow right">&#8594;</div>
-    </div>
-  </section>
 
-  <!-- Seção Perguntas Frequentes -->
-  <section class="faq-section">
-    <h2>Perguntas Frequentes</h2>
-    <div class="faq-item">
-      <h3>Como personalizo o colar?</h3>
-      <p>Ao fazer seu pedido pelo WhatsApp, enviaremos as opções de personalização.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Quais são as formas de pagamento?</h3>
-      <p>Pix, cartão de crédito ou pagamento na entrega.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Entrega disponível para quais regiões?</h3>
-      <p>Entregamos em toda a região metropolitana.</p>
-    </div>
-  </section>
+      <div class="card">
+        <img src="imagens/cesta.png" alt="Cesta Média">
+        <h3>Opção 2</h3>
+        <p class="descricao">10 itens: 5 trufas, 3 barra de 100g, 1 caixa de bomboms, 1 caixa de biscoitos</p>
+        <p class="valor">R$ 250,00</p>
+        <a href="#" class="botao">Quero essa!</a>
+      </div>
 
-  <!-- Rodapé -->
-  <footer class="footer">
-    <p>&copy; 2025 - Seu Nome ou Sua Loja. Todos os direitos reservados.</p>
+      <div class="card">
+        <img src="imagens/cesta.png" alt="Cesta Grande">
+        <h3>Opção 3</h3>
+        <p class="descricao">15 itens: 8 trufas, 3 barra de 100g, 2 caixa de bomboms, 2 caixas de biscoitos</p>
+        <p class="valor">R$ 350,00</p>
+        <a href="#" class="botao">Quero essa!</a>
+      </div>
+    </section>
+    <section class="perguntas-frequentes">
+      <img src="imagens/linha.png" alt="Linha Decorativa" class="linha">
+
+      <div class="titulo-perguntas">
+          <img src="imagens/perguntas.png" alt="Ícone de Perguntas Frequentes" class="icone-perguntas">
+          <h3>Perguntas Frequentes</h3>
+      </div>
+
+      <div class="pergunta"  onclick="clickPergunta1()">
+        <h4>Os chocolates são realmente da Cacau Show?</h4><span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </div>
+      <hr>
+      <div id="resposta1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quos nihil id excepturi facilis? Suscipit odit, aspernatur natus veniam id doloribus dolor. Veniam corrupti aperiam vero totam enim repellat. Nisi!</p>
+      </div>
+
+      <div class="pergunta" onclick="clickPergunta2()">
+        <h4>Como faço para comprar?</h4><span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </div>
+      <hr>
+      <div id="resposta2">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae totam officiis dolor ex ut veniam magni nemo? Saepe itaque, nemo commodi quaerat aut unde optio accusantium quidem in, suscipit fugit?</p>
+      </div>
+
+      <div class="pergunta" onclick="clickPergunta3()">
+        <h4>Como faço o pagamento?</h4><span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </div>
+      <hr>
+      <div id="resposta3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at magnam alias officiis quidem doloremque aperiam quis enim debitis vero cupiditate, unde delectus, possimus, laboriosam veritatis voluptatum minima in fugiat.</p>
+      </div>
+
+      <div class="pergunta" onclick="clickPergunta4()">
+        <h4>Como funciona a entrega?</h4><span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </div>
+      <hr>
+      <div id="resposta4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates ut illum, a consequatur quisquam alias temporibus sunt, ex exercitationem, qui blanditiis? Debitis recusandae corporis, reiciendis enim vel consequatur sint?</p>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div>
+      <a href="">
+        <img src="imagens/whats.png" alt="Ícone WhatsApp" class="icone">
+        (15) 99837-2227
+      </a>
+    </div>
+    <div>
+      <a href="">
+        <img src="imagens/insta.png" alt="Ícone Instagram" class="icone">
+        @pedro.cacaushow
+      </a>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function clickPergunta1() {
+      if (resposta1.style.display == 'none') {
+        resposta1.style.display = 'block'
+      } else {
+        resposta1.style.display = 'none'
+      }
+    }
+
+    function clickPergunta2() {
+      if (resposta2.style.display == 'none') {
+        resposta2.style.display = 'block'
+      } else {
+        resposta2.style.display = 'none'
+      }
+    }
+
+    function clickPergunta3() {
+      if (resposta3.style.display == 'none') {
+        resposta3.style.display = 'block'
+      } else {
+        resposta3.style.display = 'none'
+      }
+    }
+
+    function clickPergunta4() {
+      if (resposta4.style.display == 'block') {
+        resposta4.style.display = 'none'
+      } else {
+        resposta4.style.display = 'block'
+      }
+    }
+  </script>
 </body>
 </html>
