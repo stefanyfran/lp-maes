@@ -75,7 +75,7 @@ header {
 }
 
 .subtitulo-cestas {
-  padding-top: .5rem;
+  padding: .5rem;
   text-align: center;
   font-family: var(--fonte1);
   font-size: 1.2em;
@@ -84,9 +84,7 @@ header {
 }
 
 div.card {
-  display: block;
   width: 80vw;
-  height: 80vh;
   margin: auto;
   margin-top: 2rem;
   background-color: #f5e0c6;
@@ -95,8 +93,8 @@ div.card {
 }
 
 .card > img {
-  display: block;
-  height: 28vh;
+  display: flex;
+  width: 65vw;
   margin: auto;
 }
 
@@ -105,9 +103,11 @@ div.card {
   font-family: var(--fonte1);
   font-size: 1.8em;
   color: var(--cor4);
+  padding: .5rem;
 }
 
-.card p {
+.card ul {
+  list-style-type: none;
   text-align: center;
   font-family: var(--fonte2);
   font-size: 1em;
@@ -119,6 +119,7 @@ div.card {
   font-family: var(--fonte1);
   font-size: 1.6em;
   font-weight: bold;
+  text-align: center;
   padding: .3rem;
 }
 
@@ -127,6 +128,7 @@ div.card {
   width: 30vw;
   margin: auto;
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
   text-decoration: none;
   font-family: var(--fonte2);
@@ -139,7 +141,7 @@ div.card {
 }
 
 img.icone-perguntas {
-  width: 40px;
+  width: 60px;
   padding: 1rem;
 }
 
