@@ -198,21 +198,22 @@ hr {
 
 footer {
   background-color: var(--cor4);
-  margin: 2.5rem 0rem 2rem 0rem;
+  margin: 2.5rem 0rem 0rem 0rem;
   padding: 0.5rem;
   text-align: center;
 }
 
-footer > div {
-  display: inline-block;
-  padding: 1rem;
+.botao-whats {
+  background-color: var(--cor4);
+  border: none;
+  font-family: var(--fonte2);
+  font-size: 1.2em;
+  padding: .5rem;
 }
 
-footer a {
+.botao-whats a {
   text-decoration: none;
   color: var(--cor1);
-  font-family: var(--fonte2);
-  font-size: 1.1em;
 }
 
 .icone {

@@ -28,11 +28,7 @@
     }
 
     .card img {
-        height: 40vh;
-    }
-
-    div.card {
-        height: 75vh;
+        width: 30vw;
     }
 
     .card .botao {
