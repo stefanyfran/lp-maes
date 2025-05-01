@@ -7,6 +7,11 @@
         background-position: center center;
     }
 
+    header > div > p {
+        width: 50vw;
+        margin: auto;
+    }
+
     .linha {
         width: 25vw;
     }
@@ -48,6 +53,6 @@
     #resposta1, #resposta2, #resposta3, #resposta4 {
         width: 60vw;
         margin: auto;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }

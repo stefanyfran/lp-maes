@@ -102,12 +102,11 @@ div.card {
 }
 
 .card ul {
-  list-style-type: none;
-  text-align: center;
+  text-align: left;
   font-family: var(--fonte2);
   font-size: 1em;
   color: var(--cor5);
-  padding: .3rem 1rem;
+  padding: .3rem 0rem 0rem 2.5rem;
 }
 
 .card .valor {
@@ -166,12 +165,10 @@ img.icone-perguntas {
   display: flex;
   flex-direction: row;
   color: var(--cor3);
-  cursor: pointer;
   padding: 1rem;
 }
 
 #resposta1, #resposta2, #resposta3, #resposta4 {
-  display: none;
   width: 80vw;
   text-align: center;
   font-family: var(--fonte2);
@@ -181,7 +178,7 @@ img.icone-perguntas {
   border: 1px solid var(--dourado);
   border-radius: 10px;
   margin: auto;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 0.5rem;
 }
 
